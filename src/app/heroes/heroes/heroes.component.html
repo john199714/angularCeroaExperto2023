@@ -1,0 +1,22 @@
+<h2>Listado de Heroes</h2>
+
+<dl>
+    <td>Nombre:</td>
+    <dd>{{nombre}}</dd>
+
+    <td>Edad:</td>
+    <dd>{{edad}}</dd>
+
+    <td>Funcion:</td>
+    <dd>{{obtenerNombre()}}</dd>
+
+
+    <td>Capitalizado:</td>
+    <!--Es un METODO GET los () a lado del nombre no son necesarios -->
+    <dd>{{nombreCapitalizado}}</dd>
+</dl>
+
+
+    <button (click)="cambiarNombre()">Cambiar Heroe</button>
+
+    <button (click)="cambiarEdad()">Cambiar Edad</button>

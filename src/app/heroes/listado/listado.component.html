@@ -1,0 +1,29 @@
+<p>Listado de Heroes</p>
+
+<!-------------------- ngIf y ngElse ---------------------->
+<!-- LABEL QUE MUESTRA LOS ELEMENTOS BORRADOS -->
+<div *ngIf="heroeBorrado !== '';  else noBorrado ">
+    
+    <label>Heroe Borrado: {{heroeBorrado}}</label>
+</div>
+
+
+<!---------------------- ng-template ------------------------> 
+<!-- LABEL QUE INDICA NO SE HA BORRADO NINGUN ELEMENTO -->
+<ng-template #noBorrado>
+
+    <label> No se ha borrado nada aun </label>
+</ng-template>
+<!------------------------------------------------------------>
+    
+
+<!-- LISTADO DE HEROES -->
+<ul>
+    <li *ngFor="let item of heroes ; let i = index">
+        {{i+1}} - {{item}}
+    </li>
+</ul>
+
+
+<!-- BOTON PARA ELIMINAR EL ELEMENTO -->
+<button (click)="borrarHeroe()"> Borrar Heroe </button>
